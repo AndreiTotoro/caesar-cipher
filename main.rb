@@ -16,9 +16,11 @@ def caesar_cipher(string, shift)
         
 
         #TO DO Check each element of the cipher array to see which element they match in the alphabet array, then repace the element in the cipher array with an element shift away in the alphabet array
-        !!
-
+        while alphabet[z] != cipher[i] do
+                z += 1
+        end
         cipher[i] = alphabet[z + shift]
+        z = 0
         i += 1
     end
 
@@ -30,4 +32,4 @@ def caesar_cipher(string, shift)
 end
 
 
-caesar_cipher("aba", 1)
+caesar_cipher("abc", 3)
